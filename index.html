@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>CARD_GAME</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    
+    <main class="difficulty">
+        <section class="difficulty__box">
+            <p class="difficulty__box_text">Выбери <br> сложность</p>
+            <article class="difficulty__box_difficulst">
+                <input type="radio" value="light" id="light__difficult">
+                <label for="light__difficult" class="difficulty__box_choice difficulty__box_light">1</label>
+                <input type="radio" value="mid" id="mid__difficult">
+                <label for="mid__difficult" class="difficulty__box_choice difficulty__box_mid">2</label>
+                <input type="radio" value="hard" id="hard__difficult">
+                <label for="hard__difficult" class="difficulty__box_choice difficulty__box_hard">3</label>
+            </article>
+            <button class="difficulty__box_button">Старт</button>
+        </section>
+    </main>
 </body>
 </html>

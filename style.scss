@@ -1,108 +1,124 @@
 $blue-120: #004980;
-$boxs_color: #C2F5FF;
-$blue-100: #0080C1;
-$salad-60: #7AC100;
+$boxs_color: #c2f5ff;
+$blue-100: #0080c1;
+$salad-60: #7ac100;
 
 @font-face {
-    font-family: StratosSkyeng;
-    src: url(./fonts/stratosskyengweb-regular.woff2) format("woff2"), url(./fonts/stratosskyengweb-regular.woff) format("woff");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: StratosSkyeng;
+  src: url(./fonts/stratosskyengweb-regular.woff2) format('woff2'),
+    url(./fonts/stratosskyengweb-regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background: $blue-120;
-    background-size: cover;
+body {
+  background: $blue-120;
+  background-size: cover;
 }
 
-.difficulty{
+.difficulty {
+  display: flex;
+  max-width: 1024px;
+  max-height: 774px;
+  padding: 158px 272px 157px 272px;
+  justify-content: center;
+  align-items: center;
+
+  &__box {
+    width: 480px;
+    height: 459px;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: $boxs_color;
     display: flex;
-    max-width: 1024px;
-    max-height: 774px;
-    padding: 158px 272px 157px 272px;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 
-    &__box{
-        width: 480px;
-        height: 459px;
-        flex-shrink: 0;
-        border-radius: 12px;
-        background: $boxs_color;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &_text{
-            color: #004980;
-            text-align: center;
-            font-size: 40px;
-            font-family: StratosSkyeng;
-            line-height: 48px;
-            padding-top: 52px;
-        }
-
-
-        &_difficulst{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            padding-top: 48px;
-            gap: 24px;
-
-
-        }
-
-        &_choice{
-            display: flex;
-            width: 97px;
-            height: 98px;
-            flex-direction: column;
-            justify-content: center;
-            flex-shrink: 0;
-        
-            color: $blue-100;
-            text-align: center;
-            font-size: 64px;
-            font-family: StratosSkyeng;
-            line-height: 72px;
-        
-            border-radius: 12px;
-            background: #FFF;
-        }
-
-        &_button{
-            display: flex;
-            width: 246px;
-            height: 48px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 67px;
-            flex-shrink: 0;
-
-            border-radius: 12px;
-            border: 0;
-            background: $salad-60;
-
-            color: #FFF;
-            text-align: center;
-
-            font-size: 24px;
-            font-family: StratosSkyeng;
-            line-height: 32px;
-        }
+    &_text {
+      color: #004980;
+      text-align: center;
+      font-size: 40px;
+      font-family: StratosSkyeng;
+      line-height: 48px;
+      padding-top: 52px;
     }
+
+    &_difficulst {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding-top: 48px;
+      gap: 24px;
+    }
+
+    &_choice {
+      display: flex;
+      width: 97px;
+      height: 98px;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 0;
+
+      color: $blue-100;
+      text-align: center;
+      font-size: 64px;
+      font-family: StratosSkyeng;
+      line-height: 72px;
+
+      border-radius: 12px;
+      background: #fff;
+
+      cursor: pointer;
+    }
+    &_choice:hover {
+      opacity: 0.8;
+      box-shadow: black 2px 1px;
+      transition: 0.3s;
+    }
+
+    &_button {
+      display: flex;
+      width: 246px;
+      height: 48px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 67px;
+      flex-shrink: 0;
+
+      border-radius: 12px;
+      border: 0;
+      background: $salad-60;
+
+      color: #fff;
+      text-align: center;
+
+      font-size: 24px;
+      font-family: StratosSkyeng;
+      line-height: 32px;
+      cursor: pointer;
+    }
+    &_button:hover {
+      opacity: 0.7;
+      box-shadow: 3px 2px black;
+      transition: 0.3s;
+    }
+    &_button:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+  }
 }
-
-
-.difficulty__box_difficulst input[type="radio"] {
-    display: none;
+.difficulty__box_difficulst input[type='radio'] {
+  display: none;
+}
+.difficulty__box_input:checked ~ label {
+  background-color: #004980;
+  color: #fff;
 }

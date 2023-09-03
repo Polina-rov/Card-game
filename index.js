@@ -1,19 +1,19 @@
-const choiceInputs = document.querySelectorAll('.difficulty__box_input');
-const choiceButton = document.querySelector('.difficulty__box_button');
+const choiceInputs = document.querySelectorAll('.difficulty__box_input')
+const choiceButton = document.querySelector('.difficulty__box_button')
 
-import { renderGameField } from './render.js';
+import { renderGameField } from './render.js'
 
-export let difficulty = '';
+export let difficulty = ''
 
 for (let choiceInput of choiceInputs) {
-  choiceInput.addEventListener('click', function (e) {
-    (difficulty = e.target.value), buttonDisabled(difficulty);
-  });
+    choiceInput.addEventListener('click', function (e) {
+        ;(difficulty = e.target.value), buttonDisabled(difficulty)
+    })
 }
 
 function buttonDisabled(difficulty) {
-  if (difficulty) {
-    choiceButton.removeAttribute('disabled');
-  }
+    if (difficulty) {
+        choiceButton.removeAttribute('disabled')
+    }
 }
-choiceButton.addEventListener('click', renderGameField);
+choiceButton.addEventListener('click', renderGameField)

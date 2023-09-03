@@ -21,8 +21,6 @@
         "deep-is": "^0.1.4",
         "doctrine": "^3.0.0",
         "escape-string-regexp": "^4.0.0",
-        "eslint-config-prettier": "^8.8.0",
-        "eslint-plugin-prettier": "^5.0.0",
         "eslint-scope": "^7.2.1",
         "eslint-visitor-keys": "^3.4.1",
         "espree": "^9.6.1",
@@ -97,8 +95,8 @@
         "start": "http-server -p 3001",
         "format": "prettier —write .",
         "lint.js": "eslint ./*.js",
-        "lint.css": "stylelint ./*.scss",
-        "lint": "npm run lint:js && npm run lint:css",
+        "lint.css": "stylelint ./*.css",
+        "lint": "npm run lint.js && npm run lint.css",
         "prepare": "husky install"
     },
     "repository": {
@@ -114,10 +112,13 @@
     "description": "",
     "devDependencies": {
         "eslint": "^8.45.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
         "husky": "^8.0.3",
-        "prettier": "^3.0.0",
-        "stylelint": "^15.10.2",
+        "prettier": "^3.0.3",
+        "stylelint": "^15.10.3",
         "stylelint-config-standard": "^34.0.0",
-        "stylelint-prettier": "^4.0.0"
+        "stylelint-config-standard-scss": "^10.0.0",
+        "stylelint-prettier": "^4.0.2"
     }
 }

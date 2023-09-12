@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "dependencies": {
+        "@typescript-eslint/parser": "^6.7.0",
         "acorn": "^8.10.0",
         "acorn-jsx": "^5.3.2",
         "ajv": "^6.12.6",
@@ -77,6 +78,7 @@
         "reusify": "^1.0.4",
         "rimraf": "^3.0.2",
         "run-parallel": "^1.2.0",
+        "save-dev": "^0.0.1-security",
         "shebang-command": "^2.0.0",
         "shebang-regex": "^3.0.0",
         "strip-ansi": "^6.0.1",
@@ -99,7 +101,7 @@
         "prepare": "husky install",
         "build": "NODE_ENV=production webpack",
         "start": "webpack-dev-server --open",
-        "stop": "webpack-dev-server --close"
+        "lint:ts": "tsc ––noEmit"
     },
     "repository": {
         "type": "git",
@@ -113,6 +115,8 @@
     "homepage": "https://github.com/Polina-rov/Card-game#readme",
     "description": "",
     "devDependencies": {
+        "@babel/eslint-parser": "^7.22.15",
+        "@types/lodash": "^4.14.198",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
         "css-minimizer-webpack-plugin": "^5.0.1",
@@ -128,10 +132,10 @@
         "stylelint-config-standard": "^34.0.0",
         "stylelint-config-standard-scss": "^10.0.0",
         "stylelint-prettier": "^4.0.2",
+        "ts-loader": "^9.4.4",
+        "typescript": "^5.2.2",
         "webpack": "^5.88.2",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1"
-        
-        
     }
 }

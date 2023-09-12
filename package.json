@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "index.js",
     "dependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.7.0",
         "@typescript-eslint/parser": "^6.7.0",
         "acorn": "^8.10.0",
         "acorn-jsx": "^5.3.2",
@@ -57,6 +58,7 @@
         "json-schema-traverse": "^0.4.1",
         "json-stable-stringify-without-jsonify": "^1.0.1",
         "levn": "^0.4.1",
+        "lint": "^1.0.0",
         "locate-path": "^6.0.0",
         "lodash": "^4.17.21",
         "lodash.merge": "^4.6.2",
@@ -87,6 +89,8 @@
         "text-table": "^0.2.0",
         "type-check": "^0.4.0",
         "type-fest": "^0.20.2",
+        "typescript-eslint-parser": "^22.0.0",
+        "typescript-estree": "^18.0.0",
         "uri-js": "^4.4.1",
         "which": "^2.0.2",
         "wrappy": "^1.0.2",
@@ -100,8 +104,7 @@
         "lint": "npm run lint.js && npm run lint.css",
         "prepare": "husky install",
         "build": "NODE_ENV=production webpack",
-        "start": "webpack-dev-server --open",
-        "lint:ts": "tsc ––noEmit"
+        "start": "webpack-dev-server --open"
     },
     "repository": {
         "type": "git",
@@ -116,15 +119,16 @@
     "description": "",
     "devDependencies": {
         "@babel/eslint-parser": "^7.22.15",
-        "@types/lodash": "^4.14.198",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
         "css-minimizer-webpack-plugin": "^5.0.1",
         "eslint": "^8.45.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-typescript": "^0.14.0",
         "html-webpack-plugin": "^5.5.3",
-        "husky": "^8.0.3",
+        "husky": "^4.3.8",
+        "lint-staged": "^14.0.1",
         "mini-css-extract-plugin": "^2.7.6",
         "prettier": "^3.0.3",
         "style-loader": "^3.3.3",

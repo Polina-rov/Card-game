@@ -49,7 +49,6 @@ export const cardsForRandom = new Array(
     cardEleven,
     cardTwelve,
 
-
     cardThirteen,
     cardFourteen,
     cardFifteen,
@@ -76,5 +75,3 @@ export const cardsForRandom = new Array(
     cardThirtyFive,
     cardThirtySix,
 );
-
-

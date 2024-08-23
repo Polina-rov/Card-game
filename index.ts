@@ -2,6 +2,7 @@ import { cardsForRandom } from "./randomCards";
 import { renderFirstPage, name } from "./render";
 import "./style.css";
 import { renderResult } from "./render";
+import removeCards from "./utils/removeCards";
 
 renderFirstPage();
 
@@ -63,17 +64,15 @@ function checkGameResult() {
     }
     if (gameCards[1] === gameCards[0]) {
         renderResult(true);
-        setTimeout(removeCards, 400);
+        setTimeout(() => removeCards(gameCards), 400);
     }
     if (gameCards[1] !== gameCards[0]) {
         renderResult(false);
-        setTimeout(removeCards, 400);
+        setTimeout(() => removeCards(gameCards), 400);
     } else {
+        ``;
         return;
     }
-}
-function removeCards() {
-    gameCards.splice(0, 2);
 }
 export function checkClick(button) {
     button.addEventListener("click", function () {

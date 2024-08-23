@@ -95,15 +95,15 @@
         "yocto-queue": "^0.1.0"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "format": "prettier —write .",
         "lint.js": "eslint ./*.js",
         "lint.css": "stylelint ./*.css",
         "lint": "npm run lint.js && npm run lint.css",
-        "prepare": "husky install",
+        "prepare": " npx husky install",
         "build": "NODE_ENV=production webpack",
         "start": "webpack-dev-server --open",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -117,11 +117,15 @@
     "homepage": "https://github.com/Polina-rov/Card-game#readme",
     "description": "",
     "devDependencies": {
+        "@babel/core": "^7.22.19",
         "@babel/eslint-parser": "^7.22.15",
+        "@babel/preset-env": "^7.22.15",
+        "@babel/preset-typescript": "^7.22.15",
         "@jest/globals": "^29.7.0",
         "@types/jest": "^29.5.4",
         "@typescript-eslint/eslint-plugin": "^6.7.0",
         "@typescript-eslint/parser": "^6.7.0",
+        "babel-jest": "^29.7.0",
         "config": "^3.3.9",
         "copy-webpack-plugin": "^11.0.0",
         "css-loader": "^6.8.1",
